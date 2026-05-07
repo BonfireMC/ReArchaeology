@@ -1,9 +1,8 @@
-package ua.mazik.rearchaeology
+package ua.bonfiremc.rearchaeology
 
 import net.fabricmc.api.ModInitializer
 
 class ReArchaeology : ModInitializer {
-
     override fun onInitialize() {
     }
 }

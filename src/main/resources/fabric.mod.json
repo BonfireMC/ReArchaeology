@@ -1,31 +1,34 @@
 {
-  "schemaVersion": 1,
-  "id": "rearchaeology",
-  "version": "${version}",
-
-  "name": "ReArchaeology",
-  "description": "",
-  "authors": [],
-  "contact": {},
-
-  "license": "LGPL-3.0",
-  "icon": "assets/rearchaeology/icon.png",
-
-  "environment": "*",
-  "entrypoints": {
-    "fabric-datagen": ["ua.mazik.rearchaeology.client.ReArchaeologyDataGenerator"],
-    "client": ["ua.mazik.rearchaeology.client.ReArchaeologyClient"],
-    "main": ["ua.mazik.rearchaeology.ReArchaeology"]
-  },
-
-  "mixins": [
-    "rearchaeology.mixins.json"
-  ],
-
-  "depends": {
-    "fabricloader": ">=${loader_version}",
-    "fabric-language-kotlin": ">=${kotlin_loader_version}",
-    "fabric-api": "*",
-    "minecraft": "${minecraft_version}"
-  }
+    "schemaVersion": 1,
+    "id": "rearchaeology",
+    "version": "${version}",
+    "name": "ReArchaeology",
+    "description": "",
+    "authors": [
+        "Bonfire Studios"
+    ],
+    "contact": {},
+    "license": "LGPL-3.0",
+    "icon": "assets/icon.png",
+    "environment": "*",
+    "entrypoints": {
+        "fabric-datagen": [
+            "ua.bonfiremc.rearchaeology.datagen.ReArchaeologyDataGenerator"
+        ],
+        "client": [
+            "ua.bonfiremc.rearchaeology.client.ReArchaeologyClient"
+        ],
+        "main": [
+            "ua.bonfiremc.rearchaeology.ReArchaeology"
+        ]
+    },
+    "mixins": [
+        "rearchaeology.mixins.json"
+    ],
+    "depends": {
+        "minecraft": "~26.1",
+        "fabricloader": "*",
+        "fabric-language-kotlin": "*",
+        "fabric-api": "*"
+    }
 }
