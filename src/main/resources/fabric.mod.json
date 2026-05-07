@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "rearchaeology",
+  "version": "${version}",
+
+  "name": "ReArchaeology",
+  "description": "",
+  "authors": [],
+  "contact": {},
+
+  "license": "LGPL-3.0",
+  "icon": "assets/rearchaeology/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": ["ua.mazik.rearchaeology.client.ReArchaeologyDataGenerator"],
+    "client": ["ua.mazik.rearchaeology.client.ReArchaeologyClient"],
+    "main": ["ua.mazik.rearchaeology.ReArchaeology"]
+  },
+
+  "mixins": [
+    "rearchaeology.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-language-kotlin": ">=${kotlin_loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
